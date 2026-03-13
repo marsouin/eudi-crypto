@@ -8,9 +8,13 @@ The primary scenario described is a **person-to-merchant (P2M) crypto payment**,
 
 The architecture demonstrates how **identity-verified crypto payments** can be implemented in alignment with European regulatory frameworks including **eIDAS 2.0, MiCA, GDPR, and ARF TS12 Strong Customer Authentication**.
 
-The complete specification is available here:
+## Specification Documents
 
-- **[Secure Crypto P2M Payments Using the EUDI Wallet](Secure_Crypto_P2M_EUDI_Use_Case.md)**
+| Document | Description |
+|----------|-------------|
+| **[Secure_Crypto_P2M_EUDI_Use_Case_v0.7.1.md](Secure_Crypto_P2M_EUDI_Use_Case_v0.7.1.md)** | Current specification |
+| **[Secure_Crypto_P2M_EUDI_Use_Case.md](Secure_Crypto_P2M_EUDI_Use_Case.md)** | v0.6.5 baseline |
+| **[changes_v065_to_v071.md](changes_v065_to_v071.md)** | Changelog — what changed from v0.6.5 to v0.7.1 and why |
 
 ---
 
@@ -73,6 +77,7 @@ Identity authentication and transaction consent are handled off-chain through th
 The **payment gateway orchestrates the interaction** between the parties without holding funds or executing blockchain transactions.
 
 ![EUDI Crypto Payment Architecture](architecture.png)
+
 ---
 
 # Roles and Actors
@@ -125,7 +130,7 @@ Supported networks may include:
 
 # Strong Customer Authentication (TS12)
 
-Strong Customer Authentication is implemented through a **Proof of Crypto Account Ownership credential**, issued as a **Qualified Electronic Attestation of Attributes (QEAA)** by a **Qualified Trust Service Provider (QTSP)**.
+Strong Customer Authentication is implemented through a **Proof of Crypto Account Ownership credential**, issued as an **Electronic Attestation of Attributes (EAA)** — or a **Qualified EAA (QEAA)** when issued by a Qualified Trust Service Provider.
 
 This credential proves that the user controls a specific blockchain address without exposing private keys.
 
@@ -206,15 +211,3 @@ The architecture may be extended to additional scenarios, including:
 - **Digital Euro payment integration**
 
 Additional blockchain networks and wallet implementations may also be supported.
-
----
-
-# Specification Document
-
-The full architecture, flow diagrams, and technical examples are described in:
-
-
-**[Secure Crypto P2M Payments Using the EUDI Wallet](Secure_Crypto_P2M_EUDI_Use_Case.md)**
-
-
-
